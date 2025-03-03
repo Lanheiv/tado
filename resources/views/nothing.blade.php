@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sākums</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Tukšums</title>
 </head>
 <body>
     <head>
-        <h1>Atā laravel</h1>
+        <h1>Te nekā nav</h1>
     </head>
 </body>
 </html>
