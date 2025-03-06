@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ToDoController;
+use App\Http\Controllers\MyDiary;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,3 +15,4 @@ Route::get('/nothing', function() {
 } );
 
 Route::get('/todos', [ToDoController::class, 'index']);
+Route::get('/diary', [MyDiary::class, 'index']);
