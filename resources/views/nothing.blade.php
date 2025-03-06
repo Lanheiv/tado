@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tukšums</title>
-</head>
-<body>
-    <head>
-        <h1>Te nekā nav</h1>
-    </head>
-</body>
-</html>
+<x-layout>
+    <x-slot:title>
+        {{ $title = "Tukšums" }}
+    </x-slot:title>
+    
+    <h1>Te nekā nav</h1>
+
+    <ul>
+        <?php foreach ($todos as $todo) { ?>
+            <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
+        <?php } ?>
+    </ul>
+</x-layout>

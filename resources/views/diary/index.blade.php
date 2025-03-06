@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diensgrāmata</title>
-</head>
-<body> 
-    <x-navigation></x-navigation>
+<x-layout>
+    <x-slot:title>
+        {{ $title = "Diensgrāmata" }}
+    </x-slot:title>
+        
     <h1>Diensgrāmata</h1>
 
     <ul>
@@ -14,6 +10,4 @@
             <li><a href="/diary/{{ $diary->id }}">{{ $diary->title }}</a></li>
         <?php } ?>
     </ul>
-    
-</body>
-</html>
+</x-layout>

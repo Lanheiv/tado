@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sākums</title>
-</head>
-<body>
-<head>
-    <x-navigation></x-navigation>
+<x-layout>
+    <x-slot:title>
+        {{ $title = "Sākums" }}
+    </x-slot:title>
+    
     <h1>Sākusm!</h1>
-</head>
-</body>
-</html>
+</x-layout>
