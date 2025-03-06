@@ -6,11 +6,12 @@
     <title>Diensgrāmata</title>
 </head>
 <body> 
+    <x-navigation></x-navigation>
     <h1>Diensgrāmata</h1>
 
     <ul>
         <?php foreach ($diary as $diary) { ?>
-            <li><?= $diary["title"] ?></li>
+            <li><a href="/diary/{{ $diary->id }}">{{ $diary->title }}</a></li>
         <?php } ?>
     </ul>
     

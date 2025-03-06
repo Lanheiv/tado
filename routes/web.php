@@ -15,4 +15,8 @@ Route::get('/nothing', function() {
 } );
 
 Route::get('/todos', [ToDoController::class, 'index']);
+Route::get('/todos/{todo}', [ToDoController::class, 'show']);
+
+
 Route::get('/diary', [MyDiary::class, 'index']);
+Route::get('/diary/{diarys}', [MyDiary::class, 'show']);
