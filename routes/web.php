@@ -14,8 +14,17 @@ Route::get('/nothing', function() {
     return view('nothing');
 } );
 
+// Saraksta daļa
 Route::get('/todos', [ToDoController::class, 'index']);
+Route::get('/todos/create', [ToDoController::class, 'create']);
+Route::post('/todos', [ToDoController::class, 'store']);
+
 Route::get('/todos/{todo}', [ToDoController::class, 'show']);
 
+// Dienasgrāmatas sadaļa
 Route::get('/diary', [MyDiary::class, 'index']);
+Route::get('/diary/create', [MyDiary::class, 'create']);
+Route::post('/diary', [MyDiary::class, 'store']);
+
 Route::get('/diary/{diarys}', [MyDiary::class, 'show']);
+

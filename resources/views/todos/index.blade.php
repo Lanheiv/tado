@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        {{ $title = "Todo" }}
+        Todo
     </x-slot:title>
     
     <h1>Visi veicamie uzdevumi</h1>

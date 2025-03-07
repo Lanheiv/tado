@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        {{ $title = "Sākums" }}
+        Sākums
     </x-slot:title>
     
     <h1>Sākusm!</h1>
