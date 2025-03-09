@@ -3,15 +3,17 @@
         Izveidot uzdevumu
     </x-slot:title>
 
-    <h1>Izveidot uzdevumu</h1>
+    <div class="box">
+        <h1>Izveidot uzdevumu</h1>
+        
+        <form class="create" method="POST" action="/todos">
+            @csrf
 
-    <form method="POST" action="/todos">
-        @csrf
-
-        <input name="content" require />
-        @error("content")
-            <p>{{ $message }}</p>
-        @enderror
-        <button>Saglabāt</button>
-    </form>
+            <input name="content" placeholder="Šeti ievadiet uzdevumu" require />
+            @error("content")
+                <p>{{ $message }}</p>
+            @enderror
+            <button>Saglabāt</button>
+        </form>
+    </div>
 </x-layout>

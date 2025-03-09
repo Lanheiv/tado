@@ -1,13 +1,15 @@
 <x-layout>
     <x-slot:title>
-        Todo
+        Uzdevumi
     </x-slot:title>
     
-    <h1>Visi veicamie uzdevumi</h1>
+    <div class="list box">
+        <h1>Uzdevumi</h1>
 
-    <ul>
-        <?php foreach ($todos as $todo) { ?>
-            <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
-        <?php } ?>
-    </ul>
+        <ul>
+            <?php foreach ($todos as $todo) { ?>
+                <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
+            <?php } ?>
+        </ul>
+    </div>
 </x-layout>

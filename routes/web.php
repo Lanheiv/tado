@@ -20,6 +20,8 @@ Route::get('/todos/create', [ToDoController::class, 'create']);
 Route::post('/todos', [ToDoController::class, 'store']);
 
 Route::get('/todos/{todo}', [ToDoController::class, 'show']);
+Route::get('/todos/{todo}/edit', [ToDoController::class, 'edit']);
+
 
 // Dienasgrāmatas sadaļa
 Route::get('/diary', [MyDiary::class, 'index']);
@@ -27,4 +29,5 @@ Route::get('/diary/create', [MyDiary::class, 'create']);
 Route::post('/diary', [MyDiary::class, 'store']);
 
 Route::get('/diary/{diarys}', [MyDiary::class, 'show']);
+
 

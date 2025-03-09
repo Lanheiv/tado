@@ -3,15 +3,17 @@
         Izveidot ierakstu
     </x-slot:title>
 
-    <h1>Izveidot ierakstu</h1>
+    <div class="box">
+        <h1>Izveidot ierakstu</h1>
 
-    <form method="POST" action="/diary">
-        @csrf
+        <form class="create" method="POST" action="/diary">
+            @csrf
 
-        <input name="title" required />
-        <input name="body" required />
-        <input type="date" name="date"/>
+            <input name="title" placeholder="Šeit ievadiet virsraksts" required />
+            <input name="body" placeholder="Šeti ievaiet rakstu" required />
+            <input type="date" name="date"/>
 
-        <button>Saglabāt</button>
-    </form>
+            <button>Saglabāt</button>
+        </form>
+    </div>
 </x-layout>
