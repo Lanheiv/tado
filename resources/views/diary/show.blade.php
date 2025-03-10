@@ -13,5 +13,12 @@
             <p>Atjaunots: {{ $diarys->update_date }}</p>
         @endif
         <p><a href="/diary/{{ $diarys->id }}/edit">Rediģēt</a></p>
+
+        <form class="create" method="POST" action="/diary/{{ $diarys->id }}">
+            @csrf
+            @method('delete')
+
+            <button></button>
+        </form>
     </div>
 </x-layout>

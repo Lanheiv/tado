@@ -54,5 +54,10 @@ class DiaryController extends Controller
 
         return view("diary.show", compact("diarys"));
     }
+    public function destroy(Diary $diarys){
+        $diarys->delete();
+
+        return redirect("/diary");
+    }
 
 }

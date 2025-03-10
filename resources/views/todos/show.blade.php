@@ -8,5 +8,12 @@
         
         <p>Izpildīts: {{ $todo->completed ? "Jā" : "Nē" }}</p>
         <p><a href="/todos/{{ $todo->id }}/edit">Rediģēt</a></p>
+
+        <form class="create" method="POST" action="/todos/{{ $todo->id }}">
+            @csrf
+            @method('delete')
+
+            <button></button>
+        </form>
     </div>
 </x-layout>

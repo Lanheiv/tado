@@ -24,6 +24,8 @@ Route::get('/todos/{todo}', [ToDoController::class, 'show']);
 Route::get('/todos/{todo}/edit', [ToDoController::class, 'edit']);
 Route::put('/todos/{todo}', [ToDoController::class, 'update']);
 
+Route::delete('/todos/{todo}', [ToDoController::class, 'destroy']);
+
 // Dienasgrāmatas sadaļa
 Route::get('/diary', [DiaryController::class, 'index']);
 Route::get('/diary/create', [DiaryController::class, 'create']);
@@ -33,4 +35,6 @@ Route::get('/diary/{diarys}', [DiaryController::class, 'show']);
 
 Route::get('/diary/{diarys}/edit', [DiaryController::class, 'edit']);
 Route::put('/diary/{diarys}', [DiaryController::class, 'update']);
+
+Route::delete('/diary/{diarys}', [DiaryController::class, 'destroy']);
 

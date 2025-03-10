@@ -8,8 +8,8 @@ class ToDoController extends Controller
 {
     public function index()
     {
-        $todos = ToDo::all();
-        return view("todos.index", compact("todos"));
+        $todo = ToDo::all();
+        return view("todos.index", compact("todo"));
     }
 
     public function show(ToDo $todo) {
@@ -45,5 +45,10 @@ class ToDoController extends Controller
 
         $todo->save();
         return view("todos.show", compact("todo"));
+    }
+    public function destroy(Todo $todo){
+        $todo->delete();
+        
+        return redirect("/todos");
     }
 }

@@ -7,9 +7,9 @@
         <h1>Uzdevumi</h1>
 
         <ul>
-            <?php foreach ($todos as $todo) { ?>
-                <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
-            <?php } ?>
+            @foreach ($todo as $task)
+                <li><a href="/todos/{{ $task->id }}">{{ $task->content }}</a></li>
+            @endforeach
         </ul>
     </div>
 </x-layout>
