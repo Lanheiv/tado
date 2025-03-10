@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title', 100);
             $table->longText('body');
             $table->date('date');
+            $table->date('update_date');
         }); // INSERT INTO diaries (title, body, date) VALUES ("Kautkas", "Teksts kas ir ļoti garš.", "2025-03-03");
     }
 
