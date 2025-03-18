@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string("content"); // Jauna string kolona ar nosaukumu conten
             $table->boolean("completed"); // Jauna true un false kolona
+            $table->enum("priority", ["low", "medium", "high"]);
         });
     }
 
