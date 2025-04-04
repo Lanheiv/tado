@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ToDoController;
 use App\Http\Controllers\DiaryController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,4 +40,14 @@ Route::get('/diary/{diarys}/edit', [DiaryController::class, 'edit']);
 Route::put('/diary/{diarys}', [DiaryController::class, 'update']);
 
 Route::delete('/diary/{diarys}', [DiaryController::class, 'destroy']);
+
+// Register sadaļa 
+Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'create']);
+
+// Login sadaļa
+Route::delete('/logout', [SessionController::class, 'destroy']);
+Route::post('/login', [SessionController::class, 'store']);
+Route::get('/login', [SessionController::class, 'create']);
+
 
