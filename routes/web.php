@@ -43,11 +43,11 @@ Route::delete('/diary/{diarys}', [DiaryController::class, 'destroy']);
 
 // Register sadaļa 
 Route::post('/register', [RegisterController::class, 'store']);
-Route::get('/register', [RegisterController::class, 'create']);
+Route::get('/register', [RegisterController::class, 'create'])->middleware("guest");
 
 // Login sadaļa
 Route::delete('/logout', [SessionController::class, 'destroy']);
 Route::post('/login', [SessionController::class, 'store']);
-Route::get('/login', [SessionController::class, 'create']);
+Route::get('/login', [SessionController::class, 'create'])->name("login")->middleware("guest");
 
 
