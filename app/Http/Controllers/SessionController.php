@@ -13,6 +13,11 @@ class SessionController extends Controller
     public function create() {
         return view("auth.login");
     }
+    public function destroy() {
+        Auth::logout();
+
+        return redirect("/");
+    }
     public function store(Request $request) {
         $validated = $request->validate([
             "email" => ["required", "email"],
@@ -28,11 +33,6 @@ class SessionController extends Controller
         }
 
         $request->session()->regenerate();
-        return redirect("/");
-    }
-    public function destroy() {
-        Auth::logout();
-
         return redirect("/");
     }
 }
